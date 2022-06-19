@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/714.3c5f0ac1.chunk.js","mappings":"mJAQA,UANA,WACE,OACE","sources":["pages/Detail/index.js"],"sourcesContent":["import React from 'react';\n\nfunction Detail() {\n  return (\n    <div>Detail</div>\n  )\n}\n\nexport default Detail;\n"],"names":[],"sourceRoot":""}
