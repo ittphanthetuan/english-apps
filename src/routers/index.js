@@ -13,9 +13,7 @@ const Loadable = (Component) => (props) => {
   );
 };
 
-const Dashboard = Loadable(lazy(() => import('pages/DashBoard')));
-const About = Loadable(lazy(() => import('pages/About')));
-const Detail = Loadable(lazy(() => import('pages/Detail')));
+const Home = Loadable(lazy(() => import('pages/Home')));
 const IPA = Loadable(lazy(() => import('pages/IPA')));
 
 function Routers() {
@@ -24,9 +22,7 @@ function Routers() {
       path: PATH_DASHBOARD.root,
       element: <Layout />,
       children: [
-        // { element: <Dashboard />, index: true },
-        // { path: PATH_DASHBOARD.about, element: <About /> },
-        // { path: PATH_DASHBOARD.detail, element: <Detail /> },
+        { element: <Home />, index: true },
         { path: PATH_DASHBOARD.ipa, element: <IPA /> },
       ]
     }

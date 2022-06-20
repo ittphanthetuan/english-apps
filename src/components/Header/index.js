@@ -2,17 +2,14 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { IconButton } from '@mui/material'
 import Icon from '@mui/material/Icon';
+import Wrapper from './Wrapper';
 
 const Header = () => {
 
   return (
-    <div className='header' >
-      <IconButton color="primary" size="large"><Icon>home</Icon></IconButton>
-      
-      {/* <Link to='/'>DashBoard</Link> &nbsp;
-      <Link to='/about'>About</Link> &nbsp;
-      <Link to='/detail'>Detail</Link> */}
-    </div>
+    <Wrapper className='header' >
+      <IconButton color="primary" size="large" as={Link} to="/"><Icon>home</Icon></IconButton>
+    </Wrapper>
   )
 }
 
