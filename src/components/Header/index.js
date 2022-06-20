@@ -5,9 +5,9 @@ const Header = () => {
 
   return (
     <div className='header' >
-      <Link to='/english-apps'>DashBoard</Link> &nbsp;
-      <Link to='/english-apps/about'>About</Link> &nbsp;
-      <Link to='/english-apps/detail'>Detail</Link>
+      <Link to='/'>DashBoard</Link> &nbsp;
+      <Link to='/about'>About</Link> &nbsp;
+      <Link to='/detail'>Detail</Link>
     </div>
   )
 }
