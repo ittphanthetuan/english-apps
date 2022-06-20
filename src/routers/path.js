@@ -9,6 +9,7 @@ export const PATH_DASHBOARD = {
   notfound: path('/404'),
   about: path('/about'),
   detail: path('/detail'),
+  ipa: path('/ipa'),
   product: {
     list: path('/product'),
     create: path('/product/create'),
