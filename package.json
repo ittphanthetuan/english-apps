@@ -1,7 +1,6 @@
 {
   "name": "reactjs-template",
   "version": "0.1.0",
-  "homepage": "https://ittphanthetuan.github.io/english-apps",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
