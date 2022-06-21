@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Stack from '@mui/material/Stack';
 import consonants from './constants/consonants';
 import diphthongs from './constants/diphthongs';
 import vowels from './constants/vowels';
+import Button from '@mui/material/Button';
 import Video from 'components/Video';
 import ListIPA from 'components/ListIPA';
 
@@ -47,8 +49,11 @@ function IPA() {
   return (
     <div className="App">
       <Video src={itemData.video} />
-      <button onClick={() => changeIndex()}>change</button>
-      <button onClick={() => changeIndex(index)}>reload</button>
+      <Stack spacing={2} direction="row">
+        <Button variant="contained" size="small" onClick={() => changeIndex()}>Change</Button>
+        <Button variant="contained" size="small" onClick={() => changeIndex(index)}>Reload</Button>
+      </Stack>
+      
       <div className="box-top">
         <div className="left-box">
           <h1>{itemData.title}</h1>

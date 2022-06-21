@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Wrapper from './Wrapper';
 
 const ListIPA = (props) => {
@@ -8,18 +11,17 @@ const ListIPA = (props) => {
       {list.map(item => {
         const isEqual = item.label === currentItem.label;
         return (
-          <div
+          <Button
             key={item.label}
-            onClick={() =>
-              changeIndex(data.findIndex((i) => i.label === item.label))
-            }
+            onClick={() => changeIndex(data.findIndex((i) => i.label === item.label))}
             className={`item-ipa ${isEqual ? 'active': ''}`}
+            variant="outlined"
+            size='medium'
           >
             {item.label}
-          </div>
+          </Button>
         )
       })}
-      
     </Wrapper>
   )
 }

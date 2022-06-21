@@ -6,15 +6,17 @@ const Wrapper = styled.div`
 
   .item-ipa {
     display: block;
+    text-transform: none;
     box-sizing: border-box;
+    margin: 5px;
     width: 50px;
-    padding: 10px 0;
-    font-size: 22px;
+    min-width: auto;
+    padding: 2px 0;
+    font-size: 18px;
     cursor: pointer;
 
     &.active {
       color: red;
-      font-weight: bold;
     }
   }
 `;
