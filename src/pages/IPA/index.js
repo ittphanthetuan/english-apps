@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import consonants from './constants/consonants';
 import diphthongs from './constants/diphthongs';
 import vowels from './constants/vowels';
+import Video from 'components/Video';
+import ListIPA from 'components/ListIPA';
 
 const getIndex = () => Math.floor(Math.random() * data.length);
 const data = [
@@ -41,35 +43,10 @@ function IPA() {
       data: data.filter((i) => i.type === "consonants")
     }
   ];
-  const renderVideo = () => {
-    if (itemData.video) {
-      return (
-        <video
-          controls
-          width="100%"
-          key={`${itemData.video}${itemData.label}${getIndex()}`}
-        >
-          {/* <source src="/media/cc0-videos/flower.webm" type="video/webm" /> */}
 
-          <source
-            src={`${itemData.video}`}
-            type="video/mp4"
-          />
-        </video>
-      );
-    }
-  };
   return (
     <div className="App">
-      {renderVideo()}
-      <a
-        href="https://drive.google.com/drive/folders/1Blhq_r-kp3iLEnie6S0Vwn8tyl1CW9Rb"
-        target="_blank"
-        rel="noreferrer"
-      >
-        link
-      </a>
-      <span>{data.length}</span>
+      <Video src={itemData.video} />
       <button onClick={() => changeIndex()}>change</button>
       <button onClick={() => changeIndex(index)}>reload</button>
       <div className="box-top">
@@ -91,9 +68,7 @@ function IPA() {
             ))}
           </ul>
         </div>
-        <div className="right-box">{}</div>
       </div>
-      {console.log(dataFilter, 'dataFilter')}
       {dataFilter.map((mydata) => (
         <>
           <h3>{mydata.label}</h3>
@@ -105,33 +80,12 @@ function IPA() {
               width: "100%"
             }}
           >
-            {mydata.data.map((text, indexText) => {
-              const style = {
-                display: "flex",
-                flexBasis: "50px",
-                padding: "10px 0",
-                fontSize: "22px",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer"
-              };
-              const isEqual = text.label === itemData.label;
-              if (isEqual) {
-                style.color = "red";
-                style.fontWeight = "bold";
-              }
-              return (
-                <div
-                  key={mydata.video}
-                  onClick={() =>
-                    changeIndex(data.findIndex((i) => i.label === text.label))
-                  }
-                  style={style}
-                >
-                  {text.label}
-                </div>
-              );
-            })}
+          <ListIPA
+            list={mydata.data}
+            data={data}
+            currentItem={itemData}
+            changeIndex={changeIndex}
+          />
           </div>
         </>
       ))}

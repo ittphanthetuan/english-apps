@@ -18,6 +18,7 @@
       "react-hooks"
   ],
   "rules": {
-    "import/no-anonymous-default-export": "off"
+    "import/no-anonymous-default-export": "off",
+    "react/prop-types": "off"
   }
 }
