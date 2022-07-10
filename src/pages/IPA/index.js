@@ -48,7 +48,12 @@ function IPA() {
 
   return (
     <div className="App">
-      <Video src={itemData.video} />
+      {//<Video key={item.video} src={item.video} />
+      }
+      {data.map((item) => (
+        <Video key={item.video} src={item.video} isShow={item.video === itemData.video} />
+      ))}
+      
       <Stack spacing={2} direction="row">
         <Button variant="contained" size="small" onClick={() => changeIndex()}>Change</Button>
         <Button variant="contained" size="small" onClick={() => changeIndex(index)}>Reload</Button>

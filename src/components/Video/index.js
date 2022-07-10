@@ -2,9 +2,9 @@ import React from 'react';
 import Wrapper from './Wrapper';
 
 const Video = (props) => {
-  const { src } = props;
+  const { src, isShow } = props;
   return (
-    <Wrapper className='video'>
+    <Wrapper className={`video ${isShow ? 'is-show': ''}`}>
       <video
         controls
         width='100%'
