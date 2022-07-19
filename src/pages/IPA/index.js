@@ -6,6 +6,49 @@ import vowels from './constants/vowels';
 import Button from '@mui/material/Button';
 import Video from 'components/Video';
 import ListIPA from 'components/ListIPA';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+  marginBottom: '20px',
+  '&:not(:last-child)': {
+    borderBottom: 0,
+  },
+  '&:before': {
+    display: 'none',
+  },
+}));
+
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    {...props}
+  />
+))(({ theme }) => ({
+  backgroundColor:
+    theme.palette.mode === 'dark'
+      ? 'rgba(255, 255, 255, .05)'
+      : 'rgba(0, 0, 0, .03)',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
+  },
+  '& .MuiAccordionSummary-content': {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
 
 const getIndex = () => Math.floor(Math.random() * data.length);
 const data = [
@@ -19,6 +62,13 @@ function IPA() {
   const [itemData, setItemData] = useState(data[getIndex()]);
   const [index, setIndex] = useState(getIndex());
 
+  const [expanded, setExpanded] = React.useState('');
+  const handleChange =
+    (panel) => (event, newExpanded) => {
+      setExpanded(newExpanded ? panel : false);
+    };
+
+
   const changeIndex = (payload) => {
     if (payload !== undefined) {
       setItemData({ ...data[payload] });
@@ -26,7 +76,6 @@ function IPA() {
       return setIndex(payload);
     }
     const dataIndex = getIndex();
-    console.log(dataIndex, "dataIndex");
     setItemData({ ...data[dataIndex] });
     return setIndex(dataIndex);
   };
@@ -50,9 +99,16 @@ function IPA() {
     <div className="App">
       {//<Video key={item.video} src={item.video} />
       }
-      {data.map((item) => (
-        <Video key={item.video} src={item.video} isShow={item.video === itemData.video} />
-      ))}
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography>Video</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          {data.map((item) => (
+            <Video key={item.video} src={item.video} isShow={item.video === itemData.video} />
+          ))}
+          </AccordionDetails>
+      </Accordion>
       
       <Stack spacing={2} direction="row">
         <Button variant="contained" size="small" onClick={() => changeIndex()}>Change</Button>
