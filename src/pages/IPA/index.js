@@ -12,6 +12,8 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { IconButton } from '@mui/material'
+import Icon from '@mui/material/Icon';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -62,6 +64,7 @@ function IPA() {
   const [itemData, setItemData] = useState(data[getIndexRandom()]);
   const [index, setIndex] = useState(getIndexRandom());
   const videosRef = useRef([])
+  const audioRef = useRef(null)
 
   const [expanded, setExpanded] = React.useState('');
   const handleChange =
@@ -102,12 +105,6 @@ function IPA() {
     }
   ];
 
-  useEffect(() => {
-    // videosRef.current = videosRef.current.slice(0, data.length);
-    // videosRef.current = videosRef.current.slice(0, data.length);
-    console.log(videosRef, data.length, 'videosRef')
-  }, [videosRef])
-  console.log(videosRef, 'videosRefvideosRef')
   return (
     <div className="App">
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -141,11 +138,25 @@ function IPA() {
               </a>
             </h3>
           )}
-          <ul>
+          <ul className='list-voca' style={{ listStyle: 'none' }}>
             {itemData.listVoca.map((text) => (
               <li key={text.pronun}>
                 <h2>{text.label}</h2>
-                <h3>{text.pronun}</h3>
+                <h3>
+                  {text.audio && (
+                    <>
+                      <IconButton color="primary" size="large" onClick={() => { audioRef.current.play() }}>
+                        <Icon>volume_up</Icon>
+                      </IconButton>
+                      <audio controls ref={audioRef} style={{ display: 'none' }}>
+                        <source src={text.audio} type="audio/mpeg" />
+                      </audio>
+                    </>
+                  )}
+                  {text.pronun}
+                </h3>
+                <div></div>
+                
               </li>
             ))}
           </ul>

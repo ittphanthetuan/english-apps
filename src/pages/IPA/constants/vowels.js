@@ -11,6 +11,8 @@ import Video10 from 'assets/ipa/vowels/10_a.mov';
 import Video11 from 'assets/ipa/vowels/11_a;.mov';
 import Video12 from 'assets/ipa/vowels/12_o.mov';
 
+import { getURLAudio } from './helpers';
+
 const vowels = [
   {
     label: 'i',
@@ -18,7 +20,8 @@ const vowels = [
     listVoca: [
       {
         label: 'happy',
-        pronun: '/ˈhæpi/'
+        pronun: '/ˈhæpi/',
+        audio: getURLAudio('/vi/media/english/us_pron/h/hap/happy/happy.mp3')
       }
     ]
   },
@@ -28,7 +31,8 @@ const vowels = [
     listVoca: [
       {
         label: 'see',
-        pronun: '/siː/'
+        pronun: '/siː/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/c__/c____/c.mp3')
       }
     ]
   },
@@ -38,7 +42,8 @@ const vowels = [
     listVoca: [
       {
         label: 'put',
-        pronun: '/pʊt/'
+        pronun: '/pʊt/',
+        audio: getURLAudio('/vi/media/english/us_pron/p/put/put__/put.mp3')
       }
     ]
   },
@@ -48,7 +53,8 @@ const vowels = [
     listVoca: [
       {
         label: 'too',
-        pronun: '/tuː/'
+        pronun: '/tuː/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/to_/to___/to.mp3')
       }
     ]
   },
@@ -58,7 +64,8 @@ const vowels = [
     listVoca: [
       {
         label: 'bed',
-        pronun: '/bed/'
+        pronun: '/bed/',
+        audio: getURLAudio('/vi/media/english/us_pron/b/bed/bed__/bed.mp3')
       }
     ]
   },
@@ -68,7 +75,8 @@ const vowels = [
     listVoca: [
       {
         label: 'about',
-        pronun: '/əˈbaʊt/'
+        pronun: '/əˈbaʊt/',
+        audio: getURLAudio('/vi/media/english/us_pron/a/abo/about/about.mp3')
       }
     ]
   },
@@ -78,7 +86,8 @@ const vowels = [
     listVoca: [
       {
         label: 'fur',
-        pronun: '/fɜː(r)/'
+        pronun: '/fɜː(r)/',
+        audio: getURLAudio('/vi/media/english/us_pron/f/fur/fur__/fur.mp3')
       }
     ]
   },
@@ -88,7 +97,8 @@ const vowels = [
     listVoca: [
       {
         label: 'saw',
-        pronun: '/sɔː/'
+        pronun: '/sɔː/',
+        audio: getURLAudio('/vi/media/english/us_pron/s/saw/saw__/saw.mp3')
       }
     ]
   },
@@ -98,7 +108,8 @@ const vowels = [
     listVoca: [
       {
         label: 'cat',
-        pronun: '/kæt/'
+        pronun: '/kæt/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/cat/cat__/cat.mp3')
       }
     ]
   },
@@ -108,7 +119,8 @@ const vowels = [
     listVoca: [
       {
         label: 'cup',
-        pronun: '/kʌp/'
+        pronun: '/kʌp/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/cup/cup__/cup.mp3')
       }
     ]
   },
@@ -118,7 +130,8 @@ const vowels = [
     listVoca: [
       {
         label: 'father',
-        pronun: '/ˈfɑːðə(r)/'
+        pronun: '/ˈfɑːðə(r)/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/cdo/cdo03/cdo0318usfath1774.mp3')
       }
     ]
   },
@@ -128,7 +141,8 @@ const vowels = [
     listVoca: [
       {
         label: 'got',
-        pronun: '/ɡɒt/'
+        pronun: '/ɡɒt/',
+        audio: getURLAudio('/vi/media/english/us_pron/g/got/got__/got.mp3')
       }
     ]
   }

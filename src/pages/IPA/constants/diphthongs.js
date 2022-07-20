@@ -6,6 +6,7 @@ import Video5 from 'assets/ipa/diphthongs/5_eu.mov';
 import Video6 from 'assets/ipa/diphthongs/6_ei.mov';
 import Video7 from 'assets/ipa/diphthongs/7_ai.mov';
 import Video8 from 'assets/ipa/diphthongs/8_oi.mov';
+import { getURLAudio } from './helpers';
 
 const diphthongs = [
   {
@@ -14,7 +15,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'near',
-        pronun: '/nɪə(r)/'
+        pronun: '/nɪə(r)/',
+        audio: getURLAudio('/vi/media/english/us_pron/n/nea/near_/near.mp3')
       }
     ]
   },
@@ -24,7 +26,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'hair',
-        pronun: '/heə(r)/'
+        pronun: '/heə(r)/',
+        audio: getURLAudio('/vi/media/english/us_pron/h/hai/hair_/hair.mp3')
       }
     ]
   },
@@ -34,7 +37,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'pure',
-        pronun: '/pjʊə(r)/'
+        pronun: '/pjʊə(r)/',
+        audio: getURLAudio('/vi/media/english/us_pron/p/pur/pure_/pure.mp3')
       }
     ]
   },
@@ -44,7 +48,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'now',
-        pronun: '/naʊ/'
+        pronun: '/naʊ/',
+        audio: getURLAudio('/vi/media/english/us_pron/n/now/now__/now.mp3')
       }
     ]
   },
@@ -54,7 +59,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'go',
-        pronun: '/ɡəʊ/'
+        pronun: '/ɡəʊ/',
+        audio: getURLAudio('/vi/media/english/us_pron/g/go_/go___/go.mp3')
       }
     ]
   },
@@ -64,7 +70,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'say',
-        pronun: '/seɪ/'
+        pronun: '/seɪ/',
+        audio: getURLAudio('/vi/media/english/us_pron/s/say/say__/say.mp3')
       }
     ]
   },
@@ -74,7 +81,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'my',
-        pronun: '/maɪ/'
+        pronun: '/maɪ/',
+        audio: getURLAudio('/vi/media/english/us_pron/m/my_/my___/my.mp3')
       }
     ]
   },
@@ -84,7 +92,8 @@ const diphthongs = [
     listVoca: [
       {
         label: 'boy',
-        pronun: '/bɔɪ/'
+        pronun: '/bɔɪ/',
+        audio: getURLAudio('/vi/media/english/us_pron/b/boy/boy__/boy.mp3')
       }
     ]
   }
