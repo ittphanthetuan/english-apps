@@ -3,24 +3,12 @@ import Wrapper from './Wrapper';
 
 const Video = (props) => {
   const { src, isShow, innerRef } = props;
-  const refVideo = useRef(null);
-
-  useEffect(() => {
-    // console.log(refVideo, 'refVideo')
-    if (refVideo.current && isShow) {
-      refVideo.current.play()
-    }
-  }, [isShow])
 
   return (
     <Wrapper className={`video ${isShow ? 'is-show': ''}`}>
       <video
         controls
-        ref={(ref) => {
-          // console.log(innerRef, 'innerRef')
-          refVideo.current = ref
-          innerRef(ref)
-        }}
+        ref={innerRef}
         width='100%'
         key={src}
       >

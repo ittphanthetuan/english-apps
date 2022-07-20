@@ -50,7 +50,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-const getIndex = () => Math.floor(Math.random() * data.length);
+const getIndexRandom = () => Math.floor(Math.random() * data.length);
 const data = [
   ...vowels.map(item => ({ ...item, type: 'vowels' })),
   ...diphthongs.map(item => ({ ...item, type: 'diphthongs' })),
@@ -59,8 +59,8 @@ const data = [
 
 
 function IPA() {
-  const [itemData, setItemData] = useState(data[getIndex()]);
-  const [index, setIndex] = useState(getIndex());
+  const [itemData, setItemData] = useState(data[getIndexRandom()]);
+  const [index, setIndex] = useState(getIndexRandom());
   const videosRef = useRef([])
 
   const [expanded, setExpanded] = React.useState('');
@@ -72,17 +72,19 @@ function IPA() {
 
   const changeIndex = (payload) => {
     if (payload !== undefined) {
+      playCurrentVideo(payload);
       setItemData({ ...data[payload] });
-
       return setIndex(payload);
     }
-    const dataIndex = getIndex();
+    const dataIndex = getIndexRandom();
     setItemData({ ...data[dataIndex] });
     return setIndex(dataIndex);
   };
 
-  const playCurrentVideo = () => {
-    videosRef.current[index] && videosRef.current[index].play()
+  const playCurrentVideo = (idx) => {
+    const indexVideo = idx !== undefined ? idx : index
+    videosRef.current[indexVideo] && videosRef.current[indexVideo].play()
+    
   }
 
   const dataFilter = [
