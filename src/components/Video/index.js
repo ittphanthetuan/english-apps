@@ -2,10 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import Wrapper from './Wrapper';
 
 const Video = (props) => {
-  const { src, isShow } = props;
+  const { src, isShow, innerRef } = props;
   const refVideo = useRef(null);
 
   useEffect(() => {
+    // console.log(refVideo, 'refVideo')
     if (refVideo.current && isShow) {
       refVideo.current.play()
     }
@@ -15,7 +16,11 @@ const Video = (props) => {
     <Wrapper className={`video ${isShow ? 'is-show': ''}`}>
       <video
         controls
-        ref={refVideo}
+        ref={(ref) => {
+          // console.log(innerRef, 'innerRef')
+          refVideo.current = ref
+          innerRef(ref)
+        }}
         width='100%'
         key={src}
       >
@@ -24,5 +29,4 @@ const Video = (props) => {
     </Wrapper>
   )
 }
-
-export default Video;
+export default React.forwardRef((props, ref) => <Video {...props} innerRef={ref} />);

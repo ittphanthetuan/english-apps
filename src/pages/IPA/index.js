@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Stack from '@mui/material/Stack';
 import consonants from './constants/consonants';
 import diphthongs from './constants/diphthongs';
@@ -61,6 +61,7 @@ const data = [
 function IPA() {
   const [itemData, setItemData] = useState(data[getIndex()]);
   const [index, setIndex] = useState(getIndex());
+  const videosRef = useRef([])
 
   const [expanded, setExpanded] = React.useState('');
   const handleChange =
@@ -80,6 +81,10 @@ function IPA() {
     return setIndex(dataIndex);
   };
 
+  const playCurrentVideo = () => {
+    videosRef.current[index] && videosRef.current[index].play()
+  }
+
   const dataFilter = [
     {
       label: "vowels",
@@ -95,22 +100,31 @@ function IPA() {
     }
   ];
 
+  useEffect(() => {
+    // videosRef.current = videosRef.current.slice(0, data.length);
+    // videosRef.current = videosRef.current.slice(0, data.length);
+    console.log(videosRef, data.length, 'videosRef')
+  }, [videosRef])
+  console.log(videosRef, 'videosRefvideosRef')
   return (
     <div className="App">
-      {//<Video key={item.video} src={item.video} />
-      }
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>Video</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          {data.map((item) => (
-            <Video key={item.video} src={item.video} isShow={item.video === itemData.video} />
-          ))}
+          {data.map((item, i) => {
+            return (
+              <>
+                <Video key={item.video} src={item.video} ref={(el) => { videosRef.current[i] = el; }} isShow={item.video === itemData.video} />
+              </>
+            )
+          })}
           </AccordionDetails>
       </Accordion>
       
       <Stack spacing={2} direction="row">
+        <Button variant="contained" size="small" onClick={() => playCurrentVideo()}>Play</Button>
         <Button variant="contained" size="small" onClick={() => changeIndex()}>Change</Button>
         <Button variant="contained" size="small" onClick={() => changeIndex(index)}>Reload</Button>
       </Stack>
