@@ -164,7 +164,7 @@ function IPA() {
       </div>
       {dataFilter.map((mydata) => (
         <>
-          <h3>{mydata.label}</h3>
+          <h3>{mydata.label} ({mydata.data.length})</h3>
           <div
             style={{
               display: "flex",
