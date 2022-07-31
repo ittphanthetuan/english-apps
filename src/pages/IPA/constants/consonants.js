@@ -28,6 +28,7 @@ const consonants = [
   {
     label: 'p',
     video: Video1,
+    cat: 'unvoiced',
     listVoca: [
       {
         label: 'pen',
@@ -39,6 +40,7 @@ const consonants = [
   {
     label: 'f',
     video: Video2,
+    cat: 'unvoiced',
     listVoca: [
       {
         label: 'fall',
@@ -50,6 +52,7 @@ const consonants = [
   { 
     label: 't',
     video: Video3,
+    cat: 'unvoiced',
     listVoca: [
       {
         label: 'tea',
@@ -61,6 +64,7 @@ const consonants = [
   {
     label: 'θ',
     video: Video4,
+    cat: 'unvoiced',
     listVoca: [
       {
         label: 'thin',
@@ -72,6 +76,7 @@ const consonants = [
   {
     label: 'tʃ',
     video: Video5,
+    cat: 'unvoiced',
     listVoca: [
       {
         label: 'chain',
@@ -82,6 +87,7 @@ const consonants = [
   },
   {
     label: 's',
+    cat: 'unvoiced',
     video: Video6,
     listVoca: [
       {
@@ -93,6 +99,7 @@ const consonants = [
   },
   {
     label: 'ʃ',
+    cat: 'unvoiced',
     video: Video7,
     listVoca: [
       {
@@ -104,6 +111,7 @@ const consonants = [
   },
   {
     label: 'k',
+    cat: 'unvoiced',
     video: Video8,
     listVoca: [
       {
@@ -115,6 +123,7 @@ const consonants = [
   },
   {
     label: 'h',
+    cat: 'unvoiced',
     video: Video9,
     listVoca: [
       {
@@ -126,6 +135,7 @@ const consonants = [
   },
   {
     label: 'b',
+    cat: 'voiced',
     video: Video10,
     listVoca: [
       {
@@ -137,6 +147,7 @@ const consonants = [
   },
   {
     label: 'v',
+    cat: 'voiced',
     video: Video11,
     listVoca: [
       {
@@ -148,6 +159,7 @@ const consonants = [
   },
   {
     label: 'd',
+    cat: 'voiced',
     video: Video12,
     listVoca: [
       {
@@ -159,6 +171,7 @@ const consonants = [
   },
   {
     label: 'ð',
+    cat: 'voiced',
     video: Video13,
     listVoca: [
       {
@@ -170,6 +183,7 @@ const consonants = [
   },
   {
     label: 'dʒ',
+    cat: 'voiced',
     video: Video14,
     listVoca: [
       {
@@ -181,6 +195,7 @@ const consonants = [
   },
   {
     label: 'z',
+    cat: 'voiced',
     video: Video15,
     listVoca: [
       {
@@ -192,6 +207,7 @@ const consonants = [
   },
   {
     label: 'ʒ',
+    cat: 'voiced',
     video: Video16,
     listVoca: [
       {
@@ -203,6 +219,7 @@ const consonants = [
   },
   {
     label: 'g',
+    cat: 'voiced',
     video: Video17,
     listVoca: [
       {
@@ -214,6 +231,7 @@ const consonants = [
   },
   {
     label: 'm',
+    cat: 'voiced',
     video: Video18,
     listVoca: [
       {
@@ -225,6 +243,7 @@ const consonants = [
   },
   {
     label: 'n',
+    cat: 'voiced',
     video: Video19,
     listVoca: [
       {
@@ -236,6 +255,7 @@ const consonants = [
   },
   {
     label: 'ŋ',
+    cat: 'voiced',
     video: Video20,
     listVoca: [
       {
@@ -247,6 +267,7 @@ const consonants = [
   },
   {
     label: 'r',
+    cat: 'voiced',
     video: Video21,
     listVoca: [
       {
@@ -258,6 +279,7 @@ const consonants = [
   },
   {
     label: 'l',
+    cat: 'voiced',
     video: Video22,
     listVoca: [
       {
@@ -269,6 +291,7 @@ const consonants = [
   },
   {
     label: 'w',
+    cat: 'voiced',
     video: Video23,
     listVoca: [
       {
@@ -281,6 +304,7 @@ const consonants = [
   },
   {
     label: 'j',
+    cat: 'voiced',
     video: Video24,
     listVoca: [
       {

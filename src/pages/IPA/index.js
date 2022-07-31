@@ -93,15 +93,21 @@ function IPA() {
   const dataFilter = [
     {
       label: "vowels",
-      data: data.filter((i) => i.type === "vowels")
+      data: data.filter((i) => i.type === "vowels"),
+      length: vowels.length
     },
     {
       label: "diphthongs",
-      data: data.filter((i) => i.type === "diphthongs")
+      data: data.filter((i) => i.type === "diphthongs"),
+      length: diphthongs.length
     },
     {
       label: "consonants",
-      data: data.filter((i) => i.type === "consonants")
+      data: [
+        { label: 'Unvoiced', data: data.filter((i) => i.type === "consonants" && i.cat === 'unvoiced') },
+        { label: 'Voiced', data: data.filter((i) => i.type === "consonants" && i.cat === 'voiced') }
+      ],
+      length: consonants.length
     }
   ];
 
@@ -164,7 +170,7 @@ function IPA() {
       </div>
       {dataFilter.map((mydata) => (
         <>
-          <h3>{mydata.label} ({mydata.data.length})</h3>
+          <h3>{mydata.label} ({mydata.length})</h3>
           <div
             style={{
               display: "flex",
@@ -173,12 +179,27 @@ function IPA() {
               width: "100%"
             }}
           >
-          <ListIPA
-            list={mydata.data}
-            data={data}
-            currentItem={itemData}
-            changeIndex={changeIndex}
-          />
+            {mydata.label === 'consonants' ? (
+              mydata.data.map(subMyData => (
+                <div key={subMyData.label} style={{ display: 'block', width: '100%' }}>
+                  <h4>- {subMyData.label}</h4>
+                    <ListIPA
+                      list={subMyData.data}
+                      data={data}
+                      currentItem={itemData}
+                      changeIndex={changeIndex}
+                    />
+                </div>
+              ))
+            ) : (
+              <ListIPA
+                list={mydata.data}
+                data={data}
+                currentItem={itemData}
+                changeIndex={changeIndex}
+              />
+            )}
+            
           </div>
         </>
       ))}
