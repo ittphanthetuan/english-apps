@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import Wrapper from './Wrapper';
 
-const Video = (props) => {
+const VideoCom = (props) => {
   const { src, isShow, innerRef } = props;
 
   return (
@@ -17,4 +17,5 @@ const Video = (props) => {
     </Wrapper>
   )
 }
-export default React.forwardRef((props, ref) => <Video {...props} innerRef={ref} />);
+export const Video = React.forwardRef((props, ref) => <VideoCom {...props} innerRef={ref} />);
+Video.displayName = Video

@@ -1,5 +1,15 @@
 {
   "category": {
-    
+    "SimplePresent": [
+      {
+        "question": "this is the text of question",
+        "answers": {
+          "A": {
+            "text": "Content of answer A",
+            "isCorrect": true
+          }
+        }
+      }
+    ]
   }
 }
