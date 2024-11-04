@@ -27,9 +27,18 @@ import { getURLAudio } from './helpers';
 const consonants = [
   {
     label: 'p',
+    order: 21,
     video: Video1,
+    youtubeVideos: [
+      'JPUr5MgeDHM'
+    ],
     cat: 'unvoiced',
     listVoca: [
+      {
+        label: '<u>P</u>ea',
+        pronun: '/piː/',
+        audio: getURLAudio('/vi/media/english/us_pron/p/p__/p____/p.mp3')
+      },
       {
         label: 'pen',
         pronun: '/pen/',
@@ -38,106 +47,19 @@ const consonants = [
     ]
   },
   {
-    label: 'f',
-    video: Video2,
-    cat: 'unvoiced',
-    listVoca: [
-      {
-        label: 'fall',
-        pronun: '/fɔːl/',
-        audio: getURLAudio('/vi/media/english/us_pron/f/fal/fall_/fall.mp3')
-      }
-    ]
-  },
-  { 
-    label: 't',
-    video: Video3,
-    cat: 'unvoiced',
-    listVoca: [
-      {
-        label: 'tea',
-        pronun: '/tiː/',
-        audio: getURLAudio('/vi/media/english/us_pron/t/t__/t____/t.mp3')
-      }
-    ]
-  },
-  {
-    label: 'θ',
-    video: Video4,
-    cat: 'unvoiced',
-    listVoca: [
-      {
-        label: 'thin',
-        pronun: '/θɪn/',
-        audio: getURLAudio('/vi/media/english/us_pron/t/thi/thin_/thin.mp3')
-      }
-    ]
-  },
-  {
-    label: 'tʃ',
-    video: Video5,
-    cat: 'unvoiced',
-    listVoca: [
-      {
-        label: 'chain',
-        pronun: '/tʃeɪn/',
-        audio: getURLAudio('/vi/media/english/us_pron/c/cha/chain/chain.mp3')
-      }
-    ]
-  },
-  {
-    label: 's',
-    cat: 'unvoiced',
-    video: Video6,
-    listVoca: [
-      {
-        label: 'see',
-        pronun: '/siː/',
-        audio: getURLAudio('/vi/media/english/us_pron/c/c__/c____/c.mp3')
-      }
-    ]
-  },
-  {
-    label: 'ʃ',
-    cat: 'unvoiced',
-    video: Video7,
-    listVoca: [
-      {
-        label: 'shoe',
-        pronun: '/ʃuː/',
-        audio: getURLAudio('/vi/media/english/us_pron/s/sho/shoe_/shoe.mp3')
-      }
-    ]
-  },
-  {
-    label: 'k',
-    cat: 'unvoiced',
-    video: Video8,
-    listVoca: [
-      {
-        label: 'cat',
-        pronun: '/kæt/',
-        audio: getURLAudio('/vi/media/english/us_pron/c/cat/cat__/cat.mp3')
-      }
-    ]
-  },
-  {
-    label: 'h',
-    cat: 'unvoiced',
-    video: Video9,
-    listVoca: [
-      {
-        label: 'hat',
-        pronun: '/hæt/',
-        audio: getURLAudio('/vi/media/english/us_pron/h/hat/hat__/hat.mp3')
-      }
-    ]
-  },
-  {
     label: 'b',
+    order: 22,
     cat: 'voiced',
     video: Video10,
+    youtubeVideos: [
+      'JPUr5MgeDHM'
+    ],
     listVoca: [
+      {
+        label: '<u>B</u>oat',
+        pronun: '/boʊt/',
+        audio: getURLAudio('/vi/media/english/us_pron/b/boa/boat_/boat.mp3')
+      },
       {
         label: 'bad',
         pronun: '/bæd/',
@@ -145,23 +67,36 @@ const consonants = [
       }
     ]
   },
-  {
-    label: 'v',
-    cat: 'voiced',
-    video: Video11,
+  { 
+    label: 't',
+    order: 23,
+    video: Video3,
+    youtubeVideos: [
+      'hGZ9GwrNWmU'
+    ],
+    cat: 'unvoiced',
     listVoca: [
       {
-        label: 'van',
-        pronun: '/væn/',
-        audio: getURLAudio('/vi/media/english/us_pron/v/van/van__/van.mp3')
+        label: '<u>T</u>ea',
+        pronun: '/tiː/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/t__/t____/t.mp3')
       }
     ]
   },
   {
     label: 'd',
+    order: 24,
     cat: 'voiced',
     video: Video12,
+    youtubeVideos: [
+      'hGZ9GwrNWmU'
+    ],
     listVoca: [
+      {
+        label: '<u>D</u>og',
+        pronun: '/dɑːɡ/',
+        audio: getURLAudio('/vi/media/english/us_pron/d/dog/dog__/dog.mp3')
+      },
       {
         label: 'did',
         pronun: '/dɪd/',
@@ -170,22 +105,40 @@ const consonants = [
     ]
   },
   {
-    label: 'ð',
-    cat: 'voiced',
-    video: Video13,
+    label: 'tʃ',
+    order: 25,
+    video: Video5,
+    youtubeVideos: [
+      'aqHebuRjO0k'
+    ],
+    cat: 'unvoiced',
     listVoca: [
       {
-        label: 'this',
-        pronun: '/ðɪs/',
-        audio: getURLAudio('/vi/media/english/us_pron/t/thi/this_/this.mp3')
+        label: '<u>Ch</u>eese',
+        pronun: '/tʃiːz/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/che/chees/cheese.mp3')
+      },
+      {
+        label: 'chain',
+        pronun: '/tʃeɪn/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/cha/chain/chain.mp3')
       }
     ]
   },
   {
     label: 'dʒ',
+    order: 26,
     cat: 'voiced',
     video: Video14,
+    youtubeVideos: [
+      'aqHebuRjO0k'
+    ],
     listVoca: [
+      {
+        label: '<u>J</u>une',
+        pronun: '/dʒuːn/',
+        audio: getURLAudio('/vi/media/english/us_pron/j/jun/june_/june.mp3')
+      },
       {
         label: 'jam',
         pronun: '/dʒæm/',
@@ -194,34 +147,40 @@ const consonants = [
     ]
   },
   {
-    label: 'z',
-    cat: 'voiced',
-    video: Video15,
+    label: 'k',
+    order: 27,
+    cat: 'unvoiced',
+    video: Video8,
+    youtubeVideos: [
+      'O_NisgL1dvY'
+    ],
     listVoca: [
       {
-        label: 'zoo',
-        pronun: '/zuː/',
-        audio: getURLAudio('/vi/media/english/us_pron/z/zoo/zoo__/zoo.mp3')
-      }
-    ]
-  },
-  {
-    label: 'ʒ',
-    cat: 'voiced',
-    video: Video16,
-    listVoca: [
+        label: '<u>C</u>ar',
+        pronun: '/kɑːr/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/car/car__/car.mp3')
+      },
       {
-        label: 'vision',
-        pronun: '/ˈvɪʒn/',
-        audio: getURLAudio('/vi/media/english/us_pron/v/vis/visio/vision.mp3')
+        label: 'cat',
+        pronun: '/kæt/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/cat/cat__/cat.mp3')
       }
     ]
   },
   {
     label: 'g',
+    order: 28,
     cat: 'voiced',
     video: Video17,
+    youtubeVideos: [
+      'O_NisgL1dvY'
+    ],
     listVoca: [
+      {
+        label: '<u>G</u>o',
+        pronun: '/ɡoʊ/',
+        audio: getURLAudio('/vi/media/english/us_pron/g/go_/go___/go.mp3')
+      },
       {
         label: 'get',
         pronun: '/ɡet/',
@@ -230,12 +189,169 @@ const consonants = [
     ]
   },
   {
-    label: 'm',
-    cat: 'voiced',
-    video: Video18,
+    label: 'f',
+    order: 29,
+    video: Video2,
+    youtubeVideos: [
+      'nR-K3mrHFv0'
+    ],
+    cat: 'unvoiced',
     listVoca: [
       {
-        label: 'man',
+        label: '<u>F</u>ly',
+        pronun: '/flaɪ/',
+        audio: getURLAudio('/vi/media/english/us_pron/f/fly/fly__/fly.mp3')
+      },
+      {
+        label: 'fall',
+        pronun: '/fɔːl/',
+        audio: getURLAudio('/vi/media/english/us_pron/f/fal/fall_/fall.mp3')
+      }
+    ]
+  },
+  {
+    label: 'v',
+    order: 30,
+    cat: 'voiced',
+    video: Video11,
+    youtubeVideos: [
+      'nR-K3mrHFv0'
+    ],
+    listVoca: [
+      {
+        label: '<u>V</u>ideo',
+        pronun: '/ˈvɪd.i.oʊ/',
+        audio: getURLAudio('/vi/media/english/us_pron/v/vid/video/video.mp3')
+      },
+      {
+        label: 'van',
+        pronun: '/væn/',
+        audio: getURLAudio('/vi/media/english/us_pron/v/van/van__/van.mp3')
+      }
+    ]
+  },
+  {
+    label: 'θ',
+    order: 31,
+    video: Video4,
+    youtubeVideos: [
+      'nlKNo1TGALA'
+    ],
+    cat: 'unvoiced',
+    listVoca: [
+      {
+        label: '<u>Th</u>ink',
+        pronun: '/θɪŋk/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/thi/think/think.mp3')
+      },
+      {
+        label: 'Thin',
+        pronun: '/θɪn/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/thi/thin_/thin.mp3')
+      }
+    ]
+  },
+  {
+    label: 'ð',
+    order: 32,
+    cat: 'voiced',
+    video: Video13,
+    youtubeVideos: [
+      'nlKNo1TGALA'
+    ],
+    listVoca: [
+      {
+        label: '<u>Th</u>is',
+        pronun: '/ðɪs/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/thi/this_/this.mp3')
+      }
+    ]
+  },
+  {
+    label: 's',
+    order: 33,
+    cat: 'unvoiced',
+    video: Video6,
+    youtubeVideos: [
+      'xl-7mSeybmI'
+    ],
+    listVoca: [
+      {
+        label: '<u>S</u>ee',
+        pronun: '/siː/',
+        audio: getURLAudio('/vi/media/english/us_pron/c/c__/c____/c.mp3')
+      }
+    ]
+  },
+  {
+    label: 'z',
+    order: 34,
+    cat: 'voiced',
+    youtubeVideos: [
+      'xl-7mSeybmI'
+    ],
+    video: Video15,
+    listVoca: [
+      {
+        label: '<u>Z</u>oo',
+        pronun: '/zuː/',
+        audio: getURLAudio('/vi/media/english/us_pron/z/zoo/zoo__/zoo.mp3')
+      }
+    ]
+  },
+  {
+    label: 'ʃ',
+    order: 35,
+    cat: 'unvoiced',
+    video: Video7,
+    youtubeVideos: [
+      'RxaLKZPPEvY',
+    ],
+    listVoca: [
+      {
+        label: '<u>Sh</u>all',
+        pronun: '/ʃæl/',
+        audio: getURLAudio('/vi/media/english/us_pron/s/sha/shall/shall.mp3')
+      },
+      {
+        label: 'shoe',
+        pronun: '/ʃuː/',
+        audio: getURLAudio('/vi/media/english/us_pron/s/sho/shoe_/shoe.mp3')
+      }
+    ]
+  },
+  {
+    label: 'ʒ',
+    order: 36,
+    cat: 'voiced',
+    video: Video16,
+    youtubeVideos: [
+      'RxaLKZPPEvY',
+    ],
+    listVoca: [
+      {
+        label: 'Televi<u>si</u>on',
+        pronun: '/ˈtel.ə.vɪʒ.ən/',
+        audio: getURLAudio('/vi/media/english/us_pron/t/tel/telev/television.mp3')
+      },
+      {
+        label: 'vision',
+        pronun: '/ˈvɪʒn/',
+        audio: getURLAudio('/vi/media/english/us_pron/v/vis/visio/vision.mp3')
+      }
+    ]
+  },
+  {
+    label: 'm',
+    order: 37,
+    cat: 'voiced',
+    video: Video18,
+    youtubeVideos: [
+      'CoEh8cz-mS4'
+    ],
+    listVoca: [
+      {
+        label: '<u>M</u>an',
         pronun: '/mæn/',
         audio: getURLAudio('/vi/media/english/us_pron/e/eus/eus72/eus72888.mp3')
       }
@@ -243,11 +359,15 @@ const consonants = [
   },
   {
     label: 'n',
+    order: 38,
     cat: 'voiced',
     video: Video19,
+    youtubeVideos: [
+      'HeMzjC672OA'
+    ],
     listVoca: [
       {
-        label: 'now',
+        label: '<u>N</u>ow',
         pronun: '/naʊ/',
         audio: getURLAudio('/vi/media/english/us_pron/n/now/now__/now.mp3')
       }
@@ -255,33 +375,50 @@ const consonants = [
   },
   {
     label: 'ŋ',
+    order: 39,
     cat: 'voiced',
     video: Video20,
+    youtubeVideos: [
+      '6ESY7ueSfrc'
+    ],
     listVoca: [
       {
-        label: 'sing',
+        label: 'si<u>ng</u>',
         pronun: '/sɪŋ/',
         audio: getURLAudio('/vi/media/english/us_pron/s/sin/sing_/sing.mp3')
       }
     ]
   },
   {
-    label: 'r',
-    cat: 'voiced',
-    video: Video21,
+    label: 'h',
+    order: 40,
+    cat: 'unvoiced',
+    video: Video9,
+    youtubeVideos: [
+      'uOG-4ZjR7ic'
+    ],
     listVoca: [
       {
-        label: 'red',
-        pronun: '/red/',
-        audio: getURLAudio('/vi/media/english/us_pron/r/rea/read_/read_read.mp3')
+        label: '<u>H</u>at',
+        pronun: '/hæt/',
+        audio: getURLAudio('/vi/media/english/us_pron/h/hat/hat__/hat.mp3')
       }
     ]
   },
   {
     label: 'l',
+    order: 41,
     cat: 'voiced',
     video: Video22,
+    youtubeVideos: [
+      'FP0jHNoFqWo'
+    ],
     listVoca: [
+      {
+        label: '<u>L</u>ove',
+        pronun: '/lʌv/',
+        audio: getURLAudio('/vi/media/english/us_pron/l/lov/love_/love.mp3')
+      },
       {
         label: 'leg',
         pronun: '/leɡ/',
@@ -290,13 +427,33 @@ const consonants = [
     ]
   },
   {
+    label: 'r',
+    order: 42,
+    cat: 'voiced',
+    video: Video21,
+    youtubeVideos: [
+      'G_OQjKLvt0E'
+    ],
+    listVoca: [
+      {
+        label: '<u>R</u>ed',
+        pronun: '/red/',
+        audio: getURLAudio('/vi/media/english/us_pron/r/rea/read_/read_read.mp3')
+      }
+    ]
+  },
+  {
     label: 'w',
+    order: 43,
     cat: 'voiced',
     video: Video23,
+    youtubeVideos: [
+      'RW94L6606DE'
+    ],
     listVoca: [
       {
         label: 'wet',
-        pronun: '/wet/',
+        pronun: '/<u>W</u>et/',
         audio: getURLAudio('/vi/media/english/us_pron/w/wet/wet__/wet.mp3')
       }
     ]
@@ -304,11 +461,15 @@ const consonants = [
   },
   {
     label: 'j',
+    order: 44,
     cat: 'voiced',
     video: Video24,
+    youtubeVideos: [
+      '1Yo4BHIIBP8'
+    ],
     listVoca: [
       {
-        label: 'yes',
+        label: '<u>Y</u>es',
         pronun: '/jes/',
         audio: getURLAudio('/vi/media/english/us_pron/y/yes/yes__/yes.mp3')
       }

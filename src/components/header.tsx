@@ -5,16 +5,17 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar"
+import Link from 'next/link'
 
 export function Header() {
   return (
-    <div className='header'>
+    <div className='header p-4'>
       <Menubar className='inline-block'>
         <MenubarMenu>
           <MenubarTrigger>Menu</MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>
-              IPA
+            <MenubarItem asChild>
+              <Link href={'/ipa'}>IPA 1</Link>
             </MenubarItem>
             {/* <MenubarItem>
               New Window <MenubarShortcut>⌘N</MenubarShortcut>

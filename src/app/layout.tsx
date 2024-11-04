@@ -21,12 +21,14 @@ export default function RootLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <main className='p-4'>
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

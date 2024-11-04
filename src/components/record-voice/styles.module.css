@@ -1,0 +1,83 @@
+.mic-toggle {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: crimson;
+  margin-bottom: 4rem;
+
+  &::before, &::after {
+    --pad: 0rem;
+    padding: 0rem;
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background-color: rgba(220, 20, 60, .2);
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
+    bottom: var(--pad);
+    border-radius: 50%;
+  }
+
+  &::before {
+    transition: .4s;
+  }
+
+  &::after {
+    transition: .2s;
+    background-color: rgba(170, 20, 60, .2);
+  }
+
+  &:hover::before {
+    --pad: -1rem;
+  }
+
+  &:hover::after {
+    --pad: -2rem;
+  }
+  &.is-recording {
+    &::before {
+      animation: smoothPadBefore .6s ease-in alternate-reverse forwards infinite;
+    }
+  
+    &::after {
+      animation: smoothPadAfter .6s ease-in alternate-reverse forwards infinite;
+    }
+  }
+}
+
+
+
+@keyframes smoothPadAfter {
+  0% {
+    top: -2rem;
+    left: -2rem;
+    right: -2rem;
+    bottom: -2rem;
+  }
+
+  100% {
+    top: -.5rem;
+    left: -.5rem;
+    right: -.5rem;
+    bottom: -.5rem;
+  }
+}
+
+@keyframes smoothPadBefore {
+  0% {
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+  }
+
+  100% {
+    top: -.5rem;
+    left: -.5rem;
+    right: -.5rem;
+    bottom: -.5rem;
+  }
+}

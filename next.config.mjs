@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 import { withNextVideo } from 'next-video/process';
+import { StrictMode } from 'react';
 
 const nextConfig = {
+  reactStrictMode: false,
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
@@ -9,6 +11,20 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  headers: () => [
+    {
+      source: '/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'no-store',
+        },
+      ],
+    },
+  ],
   // images: {
   //   localPatterns: [
   //     {
