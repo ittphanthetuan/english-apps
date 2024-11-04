@@ -6,10 +6,11 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar"
 import Link from 'next/link'
+import { ModeToggle } from './mode-toggle'
 
 export function Header() {
   return (
-    <div className='header p-4'>
+    <div className='header p-4 flex'>
       <Menubar className='inline-block'>
         <MenubarMenu>
           <MenubarTrigger>Menu</MenubarTrigger>
@@ -31,6 +32,7 @@ export function Header() {
           </MenubarContent>
         </MenubarMenu> */}
       </Menubar>
+      <ModeToggle />
     </div>
   )
 }
