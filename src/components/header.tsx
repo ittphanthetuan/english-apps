@@ -18,19 +18,8 @@ export function Header() {
             <MenubarItem asChild>
               <Link href={'/ipa'}>IPA 1</Link>
             </MenubarItem>
-            {/* <MenubarItem>
-              New Window <MenubarShortcut>⌘N</MenubarShortcut>
-            </MenubarItem> */}
           </MenubarContent>
         </MenubarMenu>
-        {/* <MenubarMenu>
-          <MenubarTrigger>Edit</MenubarTrigger>
-          <MenubarContent>
-            <MenubarItem>
-              Undo <MenubarShortcut>⌘Z</MenubarShortcut>
-            </MenubarItem>
-          </MenubarContent>
-        </MenubarMenu> */}
       </Menubar>
       <ModeToggle />
     </div>

@@ -34,7 +34,7 @@ function PageIPA() {
 
   const playCurrentVideo = (idx?: number) => {
     const indexVideo = idx !== undefined ? idx : indexActive
-    videosRef.current[indexVideo] && videosRef.current[indexVideo].play()
+    // videosRef.current[indexVideo] && videosRef.current[indexVideo].play()
     
   }
 
@@ -55,9 +55,9 @@ function PageIPA() {
                       <Button variant='ghost' className='rounded-full w-8 h-8 mr-2' onClick={() => { audioRef.current[text.label].play() }}>
                         <Volume2 />
                       </Button>
-                      <audio controls ref={ref => audioRef.current[text.label] = ref} style={{ display: 'none' }}>
+                      {/* <audio controls ref={ref => audioRef.current[text.label] = ref} style={{ display: 'none' }}>
                         <source src={text.audio} type="audio/mpeg" />
-                      </audio>
+                      </audio> */}
                     </div>
                   )}
                   <span>{text.pronun}</span>
@@ -112,7 +112,7 @@ function PageIPA() {
               return (
                 <div key={item.video} className={`flex justify-center ${isShow ? 'visible relative' : 'invisible absolute'}`}>
                   <div className='w-[700px]'>
-                    <Video src={item.video} ref={(el) => { videosRef.current[i] = el; }} isShow={item.video === allIPA[indexActive].video} />
+                    {/* <Video src={item.video} ref={(el) => { videosRef.current[i] = el; }} isShow={item.video === allIPA[indexActive].video} /> */}
                   </div>
                 </div>
               )
