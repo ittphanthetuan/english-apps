@@ -30,3 +30,32 @@
     position: absolute;
   }
 }
+
+.item-ipa-21 {
+  position: relative;
+
+  &::before {
+    @apply bg-orange-600;
+    content: "";
+    height: 5px;
+    width: calc(100% + 40px);
+    right: 0;
+    top: -5px;
+    position: absolute;
+  }
+}
+
+.item-ipa-4 {
+  position: relative;
+
+  &::before {
+    @apply bg-orange-600;
+    content: "";
+    width: 5px;
+    height: calc(100% + 40px);
+    right: -5px;
+    bottom: 0;
+    position: absolute;
+  }
+}
+

@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 // import Wrapper from './Wrapper';
 
 const VideoCom = (props: any) => {
   const { src, isShow, innerRef } = props;
+  const myRef = useRef(null)
+
+  useEffect(() => {
+    // myRef.current.play()
+  }, [])
 
   return (
     <div className={`video`}>
       <video
         controls
+        // ref={myRef}
         ref={innerRef}
         width='100%'
       >
