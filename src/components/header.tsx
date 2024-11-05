@@ -16,7 +16,10 @@ export function Header() {
           <MenubarTrigger>Menu</MenubarTrigger>
           <MenubarContent>
             <MenubarItem asChild>
-              <Link href={'/ipa'}>IPA 1</Link>
+              <Link href={'/'}>Home</Link>
+            </MenubarItem>
+            <MenubarItem asChild>
+              <Link href={'/ipa'}>IPA</Link>
             </MenubarItem>
           </MenubarContent>
         </MenubarMenu>

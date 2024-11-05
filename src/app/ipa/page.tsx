@@ -43,12 +43,12 @@ function PageIPA() {
 
   return (
     <div className='max-w-[1100px] m-auto overflow-x-auto'>
-      <div className='mb-5'>
+      <div className='mb-5 flex justify-center'>
         <RecordVoice />
       </div>
-      <div className='flex justify-center items-center min-w-[910px] pl-[150px]'>
+      <div className='flex justify-center items-center min-w-[910px] pr-[150px]'>
         <div className='inline-block w-[688px] relative m-[40px]'>
-          <ul className='list-voca list-none absolute right-full top-0 pr-5 min-w-[150px]'>
+          <ul className='list-voca list-none absolute left-full top-0 pr-5 min-w-[150px]'>
             {allIPA[indexActive].listVoca.map((text: any) => (
               <li key={text.label}>
                 <h2 className='font-bold' dangerouslySetInnerHTML={{ __html: text.label }} />
